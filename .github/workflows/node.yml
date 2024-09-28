@@ -10,11 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: step-security/harden-runner@446798f8213ac2e75931c1b0769676d927801858 # v2.10.0
+        with:
+          egress-policy: audit
+
       - uses: actions/checkout@v4
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+
       - name: "npm install"
         run: |
           cd ./src/public
