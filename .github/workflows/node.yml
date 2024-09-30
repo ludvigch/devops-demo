@@ -33,6 +33,7 @@ jobs:
 
 
   post_to_pr:
+    permissions: write-all
     runs-on: ubuntu-latest
     needs: build
     steps:
