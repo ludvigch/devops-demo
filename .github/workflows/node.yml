@@ -32,7 +32,7 @@ jobs:
         run: |
           cd ./src/public
           npm install
-            - name: Look in log
+
       - name: Look for log  
         run: |
           cat /home/runner/work/_actions/step-security/harden-runner/91182cccc01eb5e619899d80e4e971d6181294a7/dist/pre/cache.txt
