@@ -1,23 +1,21 @@
-const https = require("https");
+const https = require('https');
 
-https
-  .get("https://attacker.com/", (res) => {
-    if (res.statusCode < 200 || res.statusCode >= 300) {
-      console.error("HTTP Error: " + res.statusCode);
-      process.exit(1); // Exit with a failure code on HTTP error status
-    }
+// Sample URL
+const url = 'https://attacker.com/';
 
-    let data = "";
-
-    res.on("data", (chunk) => {
-      data += chunk;
+const request = https.request(url, (response) => {
+    let data = '';
+    response.on('data', (chunk) => {
+        data = data + chunk.toString();
     });
 
-    res.on("end", () => {
-      console.log(data);
+    response.on('end', () => {
+        console.log(data);
     });
-  })
-  .on("error", (err) => {
-    console.error("Error: " + err.message);
-    process.exit(1); // Exit with a failure code
-  });
+})
+
+request.on('error', (error) => {
+    console.log('An error', error);
+});
+
+request.end() 
