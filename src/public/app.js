@@ -1,4 +1,5 @@
 const express = require("express");
+const pack = require("super_cool_package");
 const app = express();
 const PORT = 1337;
 
