@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.0",
-    "super_cool_package": "file:../malicious_packages/file"
+    "super_cool_package": "file:../packages/file"
   }
 }
