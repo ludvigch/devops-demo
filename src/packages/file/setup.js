@@ -4,8 +4,6 @@ const path = require("path");
 const filePath = "../../public/app.js"
 
 if (filePath){
-  //const newFileContent = "// I don't like spoon!"
-
   const newFileContent = ' \n\
   const express = require("express");\n\
   const app = express();\n\
