@@ -8,7 +8,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       #- name: Harden Runner
       #  id: harden_runner
@@ -28,8 +29,6 @@ jobs:
           node-version: '20.17.0'
 
       - name: "npm install"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ./src/public
           npm install
